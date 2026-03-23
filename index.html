@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cabo: Misterio en el Parque Km 3</title>
+    <meta name="description" content="Juego VR de Pingüino en Comodoro">
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-sky color="#fbc02d"></a-sky>
+
+      <a-plane position="0 0 0" rotation="-90 0 0" width="100" height="100" color="#4caf50"></a-plane>
+
+      <a-entity id="pinguino" position="0 0.5 -3">
+        <a-cylinder color="black" height="1" radius="0.3"></a-cylinder> <a-sphere color="white" position="0 0.2 0.25" radius="0.15"></a-sphere> <a-cone color="orange" rotation="90 0 0" position="0 0.4 0.3" radius-bottom="0.05" height="0.2"></a-cone> </a-entity>
+
+      <a-entity id="jarilla" position="2 0.5 -5">
+        <a-cone color="#388e3c" radius-bottom="0.5" height="1.5"></a-cone>
+        <a-text value="JARILLA: Huele a resina. \n El villano paso por aqui..." 
+                position="0 2 0" align="center" color="black" width="4"></a-text>
+      </a-entity>
+
+      <a-entity id="villano" position="0 6 -10" animation="property: position; to: 0 7 -10; loop: true; dir: alternate; dur: 2000">
+        <a-box color="white" width="2" height="0.2" depth="0.5"></a-box> <a-sphere color="lightgrey" radius="0.3"></a-sphere> </a-entity>
+
+      <a-light type="ambient" color="#fff"></a-light>
+      <a-light type="directional" position="-1 1 1" intensity="0.5"></a-light>
+
+      <a-entity camera look-controls position="0 1.6 0">
+        <a-cursor color="red"></a-cursor>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
